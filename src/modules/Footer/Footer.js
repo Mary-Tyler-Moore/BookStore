@@ -12,8 +12,8 @@ export const Footer = props => {
       <nav className="nav">
         <NavLink exact to='/' className="Link" aria-label="Otwórz stronę główną" activeClassName="active">Home</NavLink>
         <NavLink exact to='/faq' className="Link" aria-label="Otwórz FAQ" activeClassName="active">Faq</NavLink>
-        <NavLink exact to='/statue' className="Link" aria-label="Otwórz regulamin" activeClassName="active">Regulamin</NavLink>
-        <NavLink exact to='/contact' className="Link" aria-label="Otwórz informacje kontaktowe" activeClassName="active">Kontakt</NavLink>
+        <NavLink exact to='/statue' className="Link" aria-label="Otwórz regulamin" activeClassName="active">Shipping</NavLink>
+        <NavLink exact to='/contact' className="Link" aria-label="Otwórz informacje kontaktowe" activeClassName="active">Contact</NavLink>
       </nav>
     </section>
   );

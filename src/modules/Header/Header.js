@@ -32,7 +32,7 @@ class Header extends Component {
     return (
       <section className="Header">
         <div className="brand">
-          Czyttam.pl
+          PLETHORA BOOKS
         </div>
         <button className="menu-btn" aria-label="Pokaż menu" onClick={() => this.toggleNav(true)}>
           <FiMenu />

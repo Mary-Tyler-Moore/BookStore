@@ -83,15 +83,15 @@ class ProductDetails extends Component {
             <h5 className="author">{product.author}</h5>
             <h2 className="title">{product.title}</h2>
             <h3 className="subtitle">{product.subtitle}</h3>
-            <h5 className="info">Rok wydania: {product.year}</h5>
+            <h5 className="info">Year Published: {product.year}</h5>
             <h5 className="divider"> | </h5>
-            <h5 className="info">Wydawnictwo: {product.publisher}</h5>
+            <h5 className="info">Publisher: {product.publisher}</h5>
             <h5 className="divider"> | </h5>
-            <h5 className="info">Ilość stron: {product.pages}</h5>
+            <h5 className="info">Pages: {product.pages}</h5>
             <h5 className="divider"> | </h5>
-            <h5 className="info">Oprawa: {product.cover}</h5>
-            <h3 className="price">{product.price ? parseCurrency(product.price) : 0} zł</h3>
-            <button className="basket-btn" aria-label="Dodaj do koszyka" onClick={() => this.props.addToCart(product)}>Dodaj do koszyka</button>
+            <h5 className="info">Binding: {product.cover}</h5>
+            <h3 className="price">${product.price ? (product.price) : 0}</h3>
+            <button className="basket-btn" aria-label="Dodaj do koszyka" onClick={() => this.props.addToCart(product)}>Add to Cart!</button>
           </div>
         </div>
         <div className="section-two">

@@ -41,7 +41,7 @@ class Header extends Component {
           <NavLink exact to='/' className="Link" aria-label="Otwórz stronę główną" activeClassName="active" onClick={() => this.toggleNav(false)}>Home</NavLink>
           <NavLink exact to='/faq' className="Link" aria-label="Otwórz FAQ" activeClassName="active" onClick={() => this.toggleNav(false)}>Faq</NavLink>
           <NavLink exact to='/statue' className="Link" aria-label="Otwórz regulamin" activeClassName="active" onClick={() => this.toggleNav(false)}>Shipping</NavLink>
-          <NavLink exact to='/contact' className="Link" aria-label="Otwórz informacje kontaktowe" activeClassName="active" onClick={() => this.toggleNav(false)}>Contactt</NavLink>
+          <NavLink exact to='/contact' className="Link" aria-label="Otwórz informacje kontaktowe" activeClassName="active" onClick={() => this.toggleNav(false)}>Contact</NavLink>
           <NavLink exact to='/cart' className="Link icon" aria-label="Otwórz koszyk" activeClassName="active" onClick={() => this.toggleNav(false)}>
             {<FiShoppingCart />}
             {this.props.productsInCart > 0 ?

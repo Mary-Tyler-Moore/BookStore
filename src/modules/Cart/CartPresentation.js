@@ -25,13 +25,13 @@ const CartPresentation = (props) => {
             <input className="discount-code-input"
               value={props.state.discountCodeInput}
               onChange={(event) => props.discountCodeChangeHandler(event)}
-              placeholder="kod rabatowy"
+              placeholder="discount code"
             />
             <button className="accept-code-btn" aria-label="Sprawdź kod" onClick={() => props.checkDiscountCode()}>{<FiCheck />}</button>
           </div>
         </div>
-        <div>Razem: <span className="cartSum">{props.state.cartSum}</span> zł</div>
-        <button className="buy-btn" aria-label="Złóż zamówienie" onClick={() => props.submitOrder()} disabled={Money.isZero(props.state.cartSum) ? true : false}>Złóż zamówienie</button>
+        <div>Total: $<span className="cartSum">{props.state.cartSum}</span></div>
+        <button className="buy-btn" aria-label="Złóż zamówienie" onClick={() => props.submitOrder()} disabled={Money.isZero(props.state.cartSum) ? true : false}>Submit your order</button>
         { props.state.submitOrder ?
           <Popup
             message={props.state.orderSummary}

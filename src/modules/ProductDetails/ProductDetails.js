@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../Cart/CartActions';
-import parseCurrency from '../../util/parseCurrency';
 import Swipeable from 'react-swipeable';
 
 import './ProductDetails.scss';

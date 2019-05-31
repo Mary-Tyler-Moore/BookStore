@@ -1,5 +1,4 @@
 import React from 'react';
-import parseCurrency from '../../util/parseCurrency';
 
 import { FiTrash2 } from 'react-icons/fi';
 import './CartListItem.scss';
@@ -18,13 +17,13 @@ const CartListItem = ({ product, amount, updateCartAmount, deleteFromCart }) => 
       </div>
       <div className="numbers-section">
         <div className="price-container">
-          <h2 className="price">{parseCurrency(product.price)} zł</h2>
+          <h2 className="price">${product.price}</h2>
         </div>
         <div className="amount-container">
           <button className="small-btn" aria-label="Zmniejsz ilość" onClick={() => updateCartAmount(product.id, -1)} disabled={isDisabled}>-</button>
           <span className="margin">{amount}</span>
           <button className="small-btn" aria-label="Zwiększ ilość" onClick={() => updateCartAmount(product.id, 1)}>+</button>
-          <span className="margin">szt</span>
+          <span className="margin">😎</span>
           <button className="small-btn icon" aria-label="Usuń" onClick={() => deleteFromCart(product.id)}><FiTrash2 /></button>
         </div>
       </div>

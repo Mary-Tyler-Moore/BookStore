@@ -29,6 +29,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <!-- Tell the browser it's a PWA -->
@@ -47,6 +49,17 @@
     <link rel="apple-touch-startup-image" href="icons/ios/ios-launchimage-2208-1242.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
   </head>
   <body>
+      <script>
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+        </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

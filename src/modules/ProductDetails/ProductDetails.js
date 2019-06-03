@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../Cart/CartActions';
+import { AddToCart } from 'react-snipcart'
 import Swipeable from 'react-swipeable';
 
 import './ProductDetails.scss';
@@ -90,7 +90,15 @@ class ProductDetails extends Component {
             <h5 className="divider"> | </h5>
             <h5 className="info">Binding: {product.cover}</h5>
             <h3 className="price">${product.price ? (product.price) : 0}</h3>
-            <button className="basket-btn" aria-label="Dodaj do koszyka" onClick={() => this.props.addToCart(product)}>Add to Cart!</button>
+            <AddToCart data={{
+		id: 'ABC123',
+		name: 'Test Product',
+		url: '/test-product',
+		price: '499.99',
+		openCart: true,
+	}}>
+	Add to Cart
+</AddToCart>
           </div>
         </div>
         <div className="section-two">
@@ -103,14 +111,7 @@ class ProductDetails extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products.productList,
-  }
-}
 
-const mapDispatchToProps = {
-  addToCart,
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails);
+
+export default(ProductDetails);
